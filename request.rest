@@ -1,0 +1,55 @@
+GET http://localhost:3000/user
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYwZDZiODJlY2YzNzU4MGVlMzdlZTciLCJ1c2VyTmFtZSI6InVzZXIgZHlhbiIsImVtYWlsQWRkcmVzcyI6InVzZXJkeWFuQG1haWwuY29tIiwiaWF0IjoxNjYwMDMwNzExLCJleHAiOjE2NjAxMTcxMTF9.wkobQNUtCyZhxHWpnDTzGoa5FW_cFoNkD4P_ih7VQmY
+
+###
+GET http://localhost:3000/user/62f0c36dfdd66613fb402bd7
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYwZDZiODJlY2YzNzU4MGVlMzdlZTciLCJ1c2VyTmFtZSI6InVzZXIgZHlhbiIsImVtYWlsQWRkcmVzcyI6InVzZXJkeWFuQG1haWwuY29tIiwiaWF0IjoxNjYwMDMwNzExLCJleHAiOjE2NjAxMTcxMTF9.wkobQNUtCyZhxHWpnDTzGoa5FW_cFoNkD4P_ih7VQmY
+
+###
+POST http://localhost:3000/user
+Content-Type: application/json
+
+{
+  "userName": "saktyaji",
+  "accountNumber": 2022100005,
+  "emailAddress": "saktyaji@mail.com",
+  "identityNumber": "U100005",
+  "password": "saktyaji123456",
+  "confirmPassword": "saktyaji123456"
+}
+
+###
+GET http://localhost:3000/user/account-number/2022100002
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYwZDZiODJlY2YzNzU4MGVlMzdlZTciLCJ1c2VyTmFtZSI6InVzZXIgZHlhbiIsImVtYWlsQWRkcmVzcyI6InVzZXJkeWFuQG1haWwuY29tIiwiaWF0IjoxNjYwMDMwNzExLCJleHAiOjE2NjAxMTcxMTF9.wkobQNUtCyZhxHWpnDTzGoa5FW_cFoNkD4P_ih7VQmY
+
+
+###
+GET http://localhost:3000/user/identity-number/U100002
+Authorization: Bearer eyJhbGciOiJIUzI1NiIsInR5cCI6IkpXVCJ9.eyJfaWQiOiI2MmYwZDZiODJlY2YzNzU4MGVlMzdlZTciLCJ1c2VyTmFtZSI6InVzZXIgZHlhbiIsImVtYWlsQWRkcmVzcyI6InVzZXJkeWFuQG1haWwuY29tIiwiaWF0IjoxNjYwMDMwNzExLCJleHAiOjE2NjAxMTcxMTF9.wkobQNUtCyZhxHWpnDTzGoa5FW_cFoNkD4P_ih7VQmY
+
+###
+PATCH  http://localhost:3000/user/62f0c354fdd66613fb402bd4
+Content-Type: application/json
+
+{
+  "userName": "userone-edit",
+  "accountNumber": 2022100001,
+  "emailAddress": "userone@mail.com",
+  "identityNumber": "U100001-edit",
+  "password": "password-edit"
+}
+
+###
+DELETE  http://localhost:3000/user/62f0c354fdd66613fb402bd4
+
+###
+POST  http://localhost:3000/user/login
+Content-Type: application/json
+
+{
+  "emailAddress": "userdyan@mail.com",
+  "password": "dyan123456"
+}
+
+###
+GET  http://localhost:3000/user/refresh/token
