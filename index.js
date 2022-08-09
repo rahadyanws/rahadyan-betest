@@ -14,6 +14,13 @@ const app = express();
 app.use(cookieParser());
 app.use(cors());
 app.use(express.json());
+app.get('/', (req, res) => {
+  res.json({ message: 'Backend Assessment Test.' });
+});
 app.use('/user', router);
 
-app.listen('3000', () => console.log('Server running at port:3000'));
+
+
+app.listen(process.env.PORT || '3000', () =>
+  console.log('Server running at port:3000')
+);
